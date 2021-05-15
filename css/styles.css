@@ -1,0 +1,54 @@
+#bgImage {
+    background-image: url(https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg);
+    height: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-family: QuickSand;
+    font-weight: bold;
+}
+
+#videoBtn {
+    position: relative;
+    top: 150px;
+    left: 80px;
+    margin: 20px;
+    font-family: QuickSand;
+    font-weight: bold;
+}
+
+h2 {
+    color: #00357A;
+    font-family: QuickSand;
+    font-weight: bold;
+}
+
+#selectedNavBtn {
+    background-color: #1498D6;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: QuickSand;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 3px #b5b5b550;
+}
+
+#unselectedNavBtn {
+    text-decoration: none;
+    color: #B5B5B5;
+    font-family: QuickSand;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
