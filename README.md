@@ -1,2 +1,2 @@
-# hometime-grupo13
+# Hometime-grupo13
 Repositório para a construção da Aplicação Web Hometime
