@@ -83,6 +83,9 @@
     margin-right: 15px;
 }
 
+
+
+/* homepage specific*/
 #welcome {
     position: relative;
     right: 50px;
@@ -98,8 +101,10 @@ h1 {
 
 #videoBtn {
     margin: 20px;
-    background-color: #1498D6;
+    background: rgb(20, 152, 214);
+    background: linear-gradient(90deg, rgba(20, 152, 214, 1) 0%, rgba(0, 53, 122, 1) 100%);
     border-radius: 25px;
+    border: none;
     text-decoration: none;
     color: white;
     font-family: QuickSand;
@@ -108,14 +113,14 @@ h1 {
 
 
 h2 {
-    color: #00357A;
+    color: rgba(0, 53, 122, 1);
     font-family: QuickSand;
     font-weight: bold;
     margin-top: 200px;
 }
 
 .footer {
-    background-color: #1498D6;
+    background-color: rgb(20, 152, 214);
 }
 
 p {
@@ -125,3 +130,23 @@ p {
 h4 {
     color: aliceblue;
 }
+
+
+
+/* activity specific*/
+
+
+
+/* helping structures specific*/
+
+
+
+/* profil specific*/
+
+
+
+/* admin specific*/
+
+
+
+/* activities page specific*/
