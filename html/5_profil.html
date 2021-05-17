@@ -11,31 +11,32 @@
 </head>
 <body>
     <div class="container-fluid banner" id="navBar">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
-                <img src="/img/Untitled-1.2.png" alt="logo" style="width: 100px;margin-left: 20px;">
-            </a>
-            <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#cNavbar" style="margin-right: 20px;">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="marco">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="img/exemplo_final_finall.png" width="230px" height="auto"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="cNavbar" style="margin-right: 20px;">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a id="unselectedNavBtn" class="nav-link m-1 mx-3" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="unselectedNavBtn" class="nav-link m-1 mx-3" href="2_selectActivities.html">Atividades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="unselectedNavBtn" class="nav-link m-1 mx-3" href="4_helpingStrucutres.html">Estruturas de Apoio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="selectedNavBtn" class="nav-link m-1 mx-3" href="">Perfil</a>
-                    </li>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" id="navigationMenu">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="disablelink" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="disablelink" href="#">Atividades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="disablelink" href="#">Estruturas de Apoio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " id="activelink" href="#" tabindex="-1">Perfil</a>
+                  </li>
                 </ul>
-                <input type="text" id="txtSearch">   
+                <input type="text" id="txtSearch" placeholder="  Pesquisa"> 
+              </div>
             </div>
         </nav>
+    </div>
 
 
 

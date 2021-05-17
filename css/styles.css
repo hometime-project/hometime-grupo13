@@ -1,12 +1,14 @@
 @media (min-width: 1000px) {
     .banner {
-        background-image: url(https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg);
+        background-image: url(/img/Imagem\ 4.png);
         background-size: 100%;
         height: 800px;
+        position: relative;
+        bottom: 100px;
         background-repeat: no-repeat;
     }
 
-    #selectedNavBtn {
+    #activelink {
         background-color: #1498D6;
         border-radius: 25px;
         text-decoration: none;
@@ -17,27 +19,34 @@
         padding-bottom: 1%;
         padding-left: 15px;
         padding-right: 15px;
-        box-shadow: 0px 3px #b5b5b550;
+
     }
 
-    #unselectedNavBtn {
+    #disablelink {
         text-decoration: none;
-        color: #B5B5B5;
+        color: #9c9c9c;
         font-family: QuickSand;
         font-weight: bold;
         padding-top: 1%;
         padding-bottom: 1%;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    #navigationMenu {
+        background-color: white;
+        border-radius: 25px;
     }
 }
 
 @media (max-width: 999px) {
     .banner {
         background-color: #b5b5b5;
+        background-size: 100%;
+        height: 120px;
     }
 
-    #selectedNavBtn {
+    #activelink {
         background-color: #1498D6;
         border-radius: 25px;
         text-decoration: none;
@@ -48,11 +57,12 @@
         padding-bottom: 1%;
         padding-left: 15px;
         padding-right: 15px;
-        box-shadow: 0px 3px #b5b5b550;
+
     }
 
-    #unselectedNavBtn {
+    #disablelink {
         text-decoration: none;
+        color: white;
         font-family: QuickSand;
         font-weight: bold;
         padding-top: 1%;
@@ -61,25 +71,33 @@
         padding-right: 15px;
     }
 
+    #navigationMenu {
+        background-color: #b5b5b5;
+        border-radius: 25px;
+    }
+
+
     #welcome {
         display: none;
     }
 
     #novidades {
-        margin: none;
+        padding-top: 100px;
     }
 
     #cards {
         width: 80%;
     }
+
 }
 
 #txtSearch {
     border: none;
     border-radius: 25px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    margin-left: 25px;
     margin-right: 15px;
 }
 
@@ -89,7 +107,7 @@
 #welcome {
     position: relative;
     right: 50px;
-    top: 30vh;
+    top: 350px;
     margin-top: 20px;
 }
 
