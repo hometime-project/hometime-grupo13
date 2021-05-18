@@ -1,6 +1,7 @@
+/* all pages */
 #activelink {
     background-color: #1498D6;
-    border-radius: 25px;
+    border-radius: 20px;
     text-decoration: none;
     color: white;
     font-family: QuickSand;
@@ -9,7 +10,6 @@
     padding-bottom: 1%;
     padding-left: 15px;
     padding-right: 15px;
-
 }
 
 #disablelink {
@@ -23,11 +23,30 @@
     padding-right: 15px;
 }
 
+#backgroundNavStyle {
+    background-color: rgba(0, 0, 0, 0.137);
+}
 
-@media (max-device-width:768px) {
-    #navstyle {
+#navStyle {
+    background-color: white;
+    border-radius: 15px;
+}
+
+#welcomeTxt {
+    font-family: QuickSand;
+    font-weight: bold;
+    color: white;
+}
+
+
+@media (max-device-width:999px) {
+    #backgroundNavStyle {
         background-color: #E7E7E7;
         position: relative;
+    }
+
+    #introDiv {
+        display: none;
     }
 
     #backshadow {
@@ -35,15 +54,41 @@
         height: 85vh;
     }
 
-}
-
-@media (min-device-width:769px) {
-    #backshadow {
-        width: 50%;
+    #txtSearch {
+        border: none;
+        border-radius: 25px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        height: 30px;
+        position: relative;
+        width: 43vh;
     }
 }
 
-#generaltext {
+
+
+@media (min-device-width:1000px) {
+    #backshadow {
+        width: 50%;
+    }
+
+    #txtSearch {
+        border: none;
+        border-radius: 25px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 5px;
+        margin-left: 25px;
+        margin-right: 15px;
+    }
+}
+
+
+
+#generalTextBlue {
     font-family: QuickSand;
     color: #00357A;
     font-weight: bold;
@@ -65,14 +110,23 @@
 
 
 /* home page */
-
-#firstImage {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 85vh;
-    background-image: url('/img/Imagem4_.png')
+@media (min-device-width:1000px) {
+    #firstImage {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 85vh;
+        background-image: url('/img/Imagem4_.png')
+    }
 }
 
+@media (max-device-width:999px) {
+    #firstImage {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: auto;
+        background-image: url('/img/Imagem4_.png')
+    }
+}
 
 
 /* logs page */

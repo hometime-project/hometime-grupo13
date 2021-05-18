@@ -10,14 +10,14 @@
 </head>
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.137);" id="navstyle">
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top" id="backgroundNavStyle">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="img/exemplo_final_finall.png" width="230px" height="auto"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav" style="background-color: white;border-radius: 25px;">
+            <ul class="navbar-nav" id="navStyle">
               <li class="nav-item">
                 <a class="nav-link active" id="activelink" aria-current="page" href="#">Home</a>
               </li>
@@ -31,35 +31,36 @@
                 <a class="nav-link " id="disablelink" href="html/5_profil.html" tabindex="-1">Perfil</a>
               </li>
             </ul>
+            <input type="text" id="txtSearch" placeholder="  Pesquisa">
           </div>
         </div>
     </nav>
     <!--intro txt-->
-    <section id="firstImage" class="d-flex align-items-center">
-      <div class="container">
-      <h1 style="font-family: QuickSand;font-weight: bold;color: white;">Conhece hometime, <br>a app que te fará perder<br> a noção do tempo!</h1>
-      <button class="btn btn-primary" id="btnlogin" type="button">Vídeo Promocional</button>
+    <section class="d-flex align-items-center" id="firstImage">
+      <div class="container" id="introDiv">
+        <h1 id="welcomeTxt">Conhece hometime, <br>a app que te fará perder<br> a noção do tempo!</h1>
+        <button class="btn btn-primary" id="btnlogin" type="button">Vídeo Promocional</button>
       </div>
     </section>
    <!--News content-->
    <div class="container-fluid">
-     <h2 class="text-center" id="generaltext" style="padding-top:3%;padding-bottom: 3%;">Porquê escolher a Hometime?</h2>
+     <h2 class="text-center" id="generalTextBlue" style="padding-top:3%;padding-bottom: 3%;">Porquê escolher a Hometime?</h2>
    </div>
    <div class="container">
     <div class="row">
       <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 441.png" width="213px" height="213px">
-        <h4 id="generaltext">Atividades</h4>
+        <h4 id="generalTextBlue">Atividades</h4>
         <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Com mais de uma dezena de atividades disponíveis, o mais difícil será escolher!</p>
       </div>
       <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 440.png" width="213px" height="213px">
-        <h4 id="generaltext">Estruturas de Apoio</h4>
+        <h4 id="generalTextBlue">Estruturas de Apoio</h4>
         <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Necessita de ajuda psicológica?Não se preocupe a nossa aplicação permite localizar e informar quais os consultórios de psicologia mais próximos de si! </p>
       </div>
       <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 443.png" width="213px" height="213px">
-        <h4 id="generaltext">Estatísticas</h4>
+        <h4 id="generalTextBlue">Estatísticas</h4>
         <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Poderá verificar o seu progresso ao longo do tempo e em que posição se encontra no ranking global!</p>
       </div>
     </div>
