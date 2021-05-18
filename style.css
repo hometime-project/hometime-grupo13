@@ -1,0 +1,71 @@
+#activelink{
+    background-color: #1498D6;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-family: QuickSand;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+#disablelink{
+    text-decoration: none;
+    color: #9c9c9c;
+    font-family: QuickSand;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (max-device-width:768px){
+    #navstyle{
+        background-color:#E7E7E7;
+        position: relative;
+    }
+    #backshadow{
+        width:85%;
+        height:85vh;
+
+    }
+}
+@media (min-device-width:769px){
+    #backshadow{
+        width:50%;
+    }
+}
+#firstImage{
+   background-repeat: no-repeat;
+   background-size: 100%;
+
+}
+#generaltext{
+    font-family: QuickSand;
+    color: #00357A;
+    font-weight: bold;
+}
+#generaltextwhite{
+    font-family: QuickSand;
+    color: #ffffff;
+    font-weight: bold;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+#btnlogin, #btnregister, #btnknowmore{
+    background-image: linear-gradient(to right, #1498D6 ,#00357A);
+    color:white;
+    font-family: QuickSand;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    height: 40px;
+}
+#lettering{
+    font-family: QuickSand;
+    color: #00357A;
+}
