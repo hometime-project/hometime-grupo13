@@ -33,20 +33,14 @@
     #backshadow {
         width: 85%;
         height: 85vh;
-
     }
+
 }
 
 @media (min-device-width:769px) {
     #backshadow {
         width: 50%;
     }
-}
-
-#firstImage {
-    background-repeat: no-repeat;
-    background-size: 100%;
-
 }
 
 #generaltext {
@@ -66,8 +60,42 @@
     color: white;
 }
 
+
+
+
+
+/* home page */
+
+#firstImage {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 85vh;
+    background-image: url('/img/Imagem4_.png')
+}
+
+
+
+/* logs page */
+
 #btnlogin,
-#btnregister,
+#btnregister {
+    background-image: linear-gradient(to right, #1498D6, #00357A);
+    color: white;
+    font-family: QuickSand;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    height: 40px;
+}
+
+
+/* select activities page */
+
+#lettering {
+    font-family: QuickSand;
+    color: #00357A;
+}
+
 #btnknowmore {
     background-image: linear-gradient(to right, #1498D6, #00357A);
     color: white;
@@ -78,7 +106,17 @@
     height: 40px;
 }
 
-#lettering {
-    font-family: QuickSand;
-    color: #00357A;
-}
+
+/* activity selected page */
+
+
+
+/* helping strucutures page */
+
+
+
+/* profil page */
+
+
+
+/* admin page */
