@@ -114,7 +114,7 @@
     #firstImage {
         background-repeat: no-repeat;
         background-size: 100%;
-        height: 85vh;
+        height: 60vh;
         background-image: url('/img/Imagem4_.png')
     }
 }
@@ -128,6 +128,28 @@
     }
 }
 
+#secondTitleHome {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#infoHome {
+    width: 250px;
+    font-family: QuickSand;
+    color: #00357A;
+}
+
+footer {
+    background-color: #1498D6;
+    color: white;
+    font-family: QuickSand;
+    margin-top: 3%;
+}
+
+#footerLogo {
+    width: 150px;
+    margin-bottom: 2%;
+}
 
 /* logs page */
 
