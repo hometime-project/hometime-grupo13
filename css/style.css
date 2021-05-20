@@ -1,36 +1,33 @@
 /* all pages */
 #activelink {
     background-color: #1498D6;
-    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    font-family: QuickSand;
+    font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#disablelink {
     text-decoration: none;
     color: white;
     font-family: QuickSand;
     font-weight: bold;
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#disablelink {
-    text-decoration: none;
-    color: #9c9c9c;
-    font-family: QuickSand;
-    font-weight: bold;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 #backgroundNavStyle {
     background-color: rgba(0, 0, 0, 0.137);
 }
 
-#navStyle {
-    background-color: white;
-    border-radius: 15px;
-}
+
 
 #welcomeTxt {
     font-family: QuickSand;
@@ -155,11 +152,11 @@ footer {
 
 #btnlogin,
 #btnregister {
-    background-image: linear-gradient(to right, #1498D6, #00357A);
+    background-color: #1498D6;
     color: white;
     font-family: QuickSand;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 5px;
     border: none;
     height: 40px;
 }
