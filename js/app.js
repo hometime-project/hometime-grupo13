@@ -1,11 +1,53 @@
-import UserView from './views/UserView.js'
+import activityPageView from './views/activityPageView'
+import activitiesView from './views/activitiesView'
+import adminPageView from './views/adminPageView'
+import footerView from './views/footerView'
+import helpStructurView from './views/helpStructurView'
+import logView from './views/logView'
+import navbarView from './views/navbarView'
+import profilPageView from './views/profilPageView'
 
 class App {
     constructor() {
         this.routes = {
-            '': [UserView],
-            'index': [UserView]
-        };
+            '': [
+                navbarView,
+                footerView
+            ],
+            'index': [
+                navbarView,
+                footerView
+            ],
+            'log': [
+                logView
+            ],
+            'activities': [
+                navbarView,
+                footerView,
+                activitiesView
+            ],
+            'activityPage': [
+                navbarView,
+                footerView,
+                activityPageView
+            ],
+            'helpStructur': [
+                navbarView,
+                footerView,
+                helpStructurView
+            ],
+            'profil': [
+                navbarView,
+                footerView,
+                profilPageView
+            ],
+            'admin': [
+                navbarView,
+                footerView,
+                adminPageView
+            ],
+        }
+        ;
 
         // import dummy data for testing purposes
         this.#importDataFixtures();
