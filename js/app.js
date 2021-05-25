@@ -61,18 +61,77 @@ class App {
             {
                 id: 1,
                 username: 'user1',
-                password: 'pass1'
+                email: 'user1@gmail.com',
+                password: 'pass1',
+                birthday: '01-01-2000',
+                gender: 'male',
+
+                favorites: ''
             },
             {
                 id: 2,
                 username: 'user2',
-                password: 'pass2'
+                email: 'user2@gmail.com',
+                password: 'pass2',
+                birthday: '02-02-2000',
+                gender: 'female',
+                
+                favorites: ''
             }
         ];
+        const activities = [
+            {
+                type: 'linguas',
+                name: 'ingles',
+                image: '/img/English.png',
+                details: 'details',
+                necessities: 'none',
+                time: '20min',
+                members: 'solo',
+                createdTime: '26-05-2021',
+
+                videos: '',
+                comments: ''
+
+            },
+            {
+                type: 'linguas',
+                name: 'frances',
+                image: '/img/French.png',
+                details: 'details2',
+                necessities: 'none',
+                time: '20min',
+                members: 'solo',
+                createdTime: '26-05-2021',
+
+                videos: '',
+                comments: ''
+
+            }
+        ];
+        const helpStructures = [
+            {
+                name: 'ajuda1',
+                image: '/img/helpS.png',
+                address: 'address1',
+                phoneNumber: '09237518',
+
+                openHours: ''
+            } 
+        ]
+
 
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
+        }
+
+        if (!localStorage.activities) {
+            localStorage.setItem('activities', JSON.stringify(activities));
+        }
+
+        if (!localStorage.helpStructures) {
+            localStorage.setItem('helpStructures', JSON.stringify(helpStructures));
         }
     }
 
