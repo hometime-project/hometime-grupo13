@@ -1,5 +1,5 @@
 import UserController from '../controllers/UserController.js'
 
-export default class logView {
+export default class profilPageView{
     
 }
