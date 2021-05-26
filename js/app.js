@@ -80,19 +80,35 @@ class App {
 
     #importDataFixtures() {
         const users = [
-            {
-                id: 1,
+            {   
                 username: 'user1',
-                password: 'pass1'
+                password: 'pass1',
+                email: 'email1@gmail.com',
+                databth: '01-01-2000',
+                gender: 'm',
+                type: 'user',
+
+                difficulty: 'easy',
+                duration: '20min',
+                resources: 'none',
+                favorites: ['linguas']
             },
             {
-                id: 2,
-                username: 'user2',
-                password: 'pass2'
+                username: 'admin',
+                password: 'admin',
+                email: 'email1@gmail.com',
+                databth: '02-02-2000',
+                gender: 'f',
+                type: 'admin',
+
+                difficulty: 'hard',
+                duration: '1h',
+                resources: 'some',
+                favorites: ['linguas', 'bricolage']
             }
 
         ];
-
+ 
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
