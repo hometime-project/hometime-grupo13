@@ -1,11 +1,11 @@
+import ActivitiesView from './views/activitiesView.js'
 import ActivityPageView from './views/activityPageView.js'
-import ActivityView from './views/activityView.js'
 import AdminPageView from './views/adminPageView.js'
 import FooterView from './views/footerView.js'
-import HelpStruturView from'./views/helpStruturView.js'
+import HelpStructurView from'./views/helpStructurView.js'
 import LogView from './views/logView.js'
-import NavView from './views/navView.js'
-import ProfilePageView from './views/profilePageView.js'
+import NavbarView from './views/navbarView.js'
+import ProfilPageView from './views/profilPageView.js'
 
 class App {
     constructor() {
@@ -18,19 +18,41 @@ class App {
                 FooterView,
                 HelpStruturView,
                 LogView,
-                NavView,
-                ProfilePageView
+                NavbarView,
+                ProfilPageView
             ],
             'index': [
-                NavView,
+                NavbarView,
                 FooterView
             ],
             'login': [
                 LogView
             ],
-            'register': [
-                LogView
-            ]
+            'activitiespage': [
+                NavbarView,
+                FooterView,
+                ActivitiesView
+            ],
+            'activityPage': [
+                NavView,
+                FooterView,
+                ActivityPageView
+            ],
+            'helpStructur': [
+                NavView,
+                FooterView,
+                HelpStructurView
+            ],
+            'profilPage': [
+                NavView,
+                FooterView,
+                ProfilPageView
+            ],
+            'adminPage': [
+                NavView,
+                FooterView,
+                AdminPageView
+            ],
         };
 
         // importa dados dummy para testes
