@@ -1,6 +1,8 @@
 import ActivitiesView from './views/activitiesView.js'
 import ActivityPageView from './views/activityPageView.js'
-import AdminPageView from './views/adminPageView.js'
+import AdminActivityPageView from './views/adminActivityPageView.js'
+import AdminHelpStructurPageView from './views/adminHelpStructurPageView.js'
+import AdminUserPageView from './views/adminUserPageView.js'
 import FooterView from './views/footerView.js'
 import HelpStructurView from'./views/helpStructurView.js'
 import LogView from './views/logView.js'
@@ -14,7 +16,9 @@ class App {
             '': [
                 ActivityPageView,
                 ActivityView,
-                AdminPageView,
+                AdminActivityPageView,
+                AdminUserPageView,
+                AdminHelpStructurPageView,
                 FooterView,
                 HelpStruturView,
                 LogView,
@@ -48,11 +52,22 @@ class App {
                 FooterView,
                 ProfilPageView
             ],
-            'adminPage': [
+            'adminActivityPageView': [
                 NavView,
                 FooterView,
-                AdminPageView
+                AdminActivityPageView
             ],
+            'adminHelpStructurPageView': [
+                NavView,
+                FooterView,
+                AdminHelpStructurPageView
+            ],
+            'adminUserPageView': [
+                NavView,
+                FooterView,
+                AdminUserPageView
+            ]
+            
         };
 
         // importa dados dummy para testes

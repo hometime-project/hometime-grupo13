@@ -6,7 +6,8 @@ export default class userModel {
         this.password = password
         this.birthday = birthday
         this.gender = gender
-
+        this.type = type 
+        
         this.favorites = favorites
     }
 } 

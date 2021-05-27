@@ -224,3 +224,14 @@
     width: 100px;
     height: 100px;
 }
+
+/*admin Page*/
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+th,
+td {
+    border: 1px solid black;
+}
