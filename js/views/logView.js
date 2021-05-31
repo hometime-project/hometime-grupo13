@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import UserController from '../controllers/userController.js'
 
 export default class UserView {
@@ -42,10 +41,4 @@ export default class UserView {
         const message = `<div class="alert alert-${type}" role="alert">${text}</div>`;
         event == 'login' ? this.loginMessage.innerHTML = message : this.registerMessage.innerHTML = message
     }
-=======
-import UserController from '../controllers/UserController.js'
-
-export default class logView {
-    
->>>>>>> d91d914bb1b1de0f07621e56a2c245f6644647e3
 }

@@ -1,7 +1,6 @@
 import UserModel from '../models/userModel.js'
 
 export default class UserController {
-<<<<<<< HEAD
     constructor() {
         this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
     }
@@ -26,7 +25,4 @@ export default class UserController {
     logout() {
         sessionStorage.removeItem('loggedUser')
     }
-=======
-    constructor() {}
->>>>>>> d91d914bb1b1de0f07621e56a2c245f6644647e3
 }
