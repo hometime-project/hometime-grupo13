@@ -31,7 +31,7 @@
                 <a class="nav-link" id="disablelink" href="#">Estruturas de Apoio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " id="disablelink" href="login.html" tabindex="-1">Autenticar</a>
+                <a class="nav-link " id="disablelink" href="profilepage.html" tabindex="-1">Perfil</a>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@
       </section>
     <div class="container" style="padding-top: 2%;">
     <div class="row">
-        <div class="col-2" style="text-align: center;background-color: white;font-family: QuickSand;padding-top: 1%;padding-bottom: 1%;border-radius:5px;">
+        <div class="col-2" style="max-height: 225px;text-align: center;background-color: white;font-family: QuickSand;padding-top: 1%;padding-bottom: 1%;border-radius:5px;">
             <h4>Gerir</h4>
             <hr>
             <div class="d-grid gap-2">
@@ -51,7 +51,58 @@
               </div>
         </div>
         <div class="col-1"></div>
-        <div class="col-8"></div>
+        <div class="col-8" style="background-color:white;font-family:QuickSand;color:grey">
+          <h4 class="mt-3 mb-3" style="font-weight: bold;">Criar/Editar Utilizadores</h4>
+          <div class="mb-3">
+            <input style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700;border-radius: 5px;"type="text" class="form-control" id="input1" placeholder="&#xf007 Username">
+          </div>
+          <div class="mb-3">
+            <input type="email" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700;border-radius: 5px;" class="form-control" id="input1" placeholder="&#xf0e0 Email">
+          </div>
+          <div class="mb-3">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="&#xf023 Password" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700; border-radius: 5px;">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="&#xf058 Confirmar Password" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700; border-radius: 5px;">
+        </div>
+        <div class="mb-3">
+        <input class="form-control" type="date" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700; border-radius: 5px;color:#6C757D" id="example-date-input">
+        </div>
+        <div class="mb-3 mt-3">
+           <input type="submit" class="btn btn-primary"value="Criar">
+        </div>
+        </div>
+        <div class="col-12 mt-3" style='background-color: white;'>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>

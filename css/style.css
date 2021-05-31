@@ -11,7 +11,7 @@
     padding-right: 25px;
 }
 
-#disablelink {
+#disablelink,#btnautent,#btndesautent,#linklog {
     text-decoration: none;
     color: white;
     font-family: QuickSand;
