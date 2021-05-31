@@ -3,20 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <title>Hometime: Página Principal</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(0, 0, 0, 0.137);" id="navstyle">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navStyle">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="img/exemplo_final_finall.png" width="230px" height="auto"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +19,11 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link active" id="activelink" aria-current="page" href="index.html">Home</a>
+=======
+                <a id="activelink" class="nav-link active"  aria-current="page" href="#">Home</a>
+>>>>>>> d91d914bb1b1de0f07621e56a2c245f6644647e3
               </li>
               <li class="nav-item">
                 <a class="nav-link" id="linklog" href="html/ativitiespage.html">Atividades</a>
@@ -34,47 +32,54 @@
                 <a class="nav-link" id="linklog" href="html/helpstrutr.html">Estruturas de Apoio</a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link " id="btnautent" href="html/login.html" tabindex="-1">Autenticar</a>
+=======
+                <a class="nav-link " id="disablelink" href="/html/login.html" tabindex="-1">Autenticar</a>
+>>>>>>> d91d914bb1b1de0f07621e56a2c245f6644647e3
               </li>
             </ul>
           </div>
         </div>
     </nav>
-    <section style="height: 85vh;background-image: url('img/Imagem4_.png')" class="d-flex align-items-center">
+
+    <section id="homeSectionImage" class="d-flex align-items-center">
       <div class="container">
-      <h1 style="font-family: QuickSand;font-weight: bold;color: white;">Conhece hometime, <br>a app que te fará perder<br> a noção do tempo!</h1>
+      <h1 id="welcomeText">Conhece hometime, <br>a app que te fará perder<br> a noção do tempo!</h1>
       <button class="btn btn-primary" id="btnlogin" type="button">Vídeo Promocional</button>
       </div>
     </section>
+
    <!--Porque escolher hometime-->
    <div class="container-fluid">
-     <h2 class="text-center" id="generaltext" style="padding-top:3%;padding-bottom: 3%;">Porquê escolher a Hometime?</h2>
+     <h2 class="text-center" id="generaltext">Porquê escolher a Hometime?</h2>
    </div>
    <div class="container">
     <div class="row">
-      <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+      <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 441.png" width="213px" height="213px">
         <h4 id="generaltext">Atividades</h4>
-        <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Com mais de uma dezena de atividades disponíveis, o mais difícil será escolher!</p>
+        <p class="text-center text-wrap" id="subtext">Com mais de uma dezena de atividades disponíveis, o mais difícil será escolher!</p>
       </div>
-      <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+      <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 440.png" width="213px" height="213px">
         <h4 id="generaltext">Estruturas de Apoio</h4>
-        <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Necessita de ajuda psicológica?Não se preocupe a nossa aplicação permite localizar e informar quais os consultórios de psicologia mais próximos de si! </p>
+        <p class="text-center text-wrap" id="subtext">Necessita de ajuda psicológica?Não se preocupe a nossa aplicação permite localizar e informar quais os consultórios de psicologia mais próximos de si! </p>
       </div>
-      <div class="col-sm-4 d-flex justify-content-center align-items-center flex-column">
+      <div class=" col-12 col-lg-4 d-flex justify-content-center align-items-center flex-column">
         <img src="img/Grupo 443.png" width="213px" height="213px">
         <h4 id="generaltext">Estatísticas</h4>
-        <p class="text-center text-wrap" style="width: 250px;font-family: QuickSand;color: #00357A;">Poderá verificar o seu progresso ao longo do tempo e em que posição se encontra no ranking!</p>
+        <p class="text-center text-wrap" id="subtext">Poderá verificar o seu progresso ao longo do tempo e em que posição se encontra no ranking!</p>
       </div>
     </div>
    </div>
+
    <!--Footer-->
    <footer>
-    <div class="container-fluid footer" style="background-color: #1498D6;color:white;font-family: QuickSand; margin-top: 3%;">
+    <div class="container-fluid footer" id="footer">
       <div class="row">
           <div class="col m-5 d-flex justify-content-center align-items-center flex-column">
-              <img src="img/exemplo_final_finall.png" alt="logo" style="width: 150px;margin-bottom: 2%;">
+              <img src="img/exemplo_final_finall.png" alt="logo" id="logoFooter">
               <p class="text-center">Nunca foi tão fácil, passar tempo em casa!</p>
           </div>
           <div class="col m-5">

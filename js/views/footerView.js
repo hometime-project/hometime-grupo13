@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import UserController from '../controllers/userController.js'
 
 export default class UserView {
@@ -18,4 +19,8 @@ export default class UserView {
             this.autentButton.href="html/profilepage.html"
         } 
 }
+=======
+export default class footerView {
+    
+>>>>>>> d91d914bb1b1de0f07621e56a2c245f6644647e3
 }

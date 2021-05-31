@@ -21,63 +21,114 @@
     padding-left: 25px;
     padding-right: 25px;
 }
-@media (max-device-width:768px){
-    #navstyle{
-        background-color:#E7E7E7;
+
+#navStyle {
+    background-color: rgba(0, 0, 0, 0.137)
+}
+
+#homeSectionImage {
+    height: 85vh;
+    background-image: url('/img/Imagem4_.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-device-width:768px) {
+    #navStyle {
+        background-color: #E7E7E7;
         position: relative;
     }
-    #backshadow{
-        width:85%;
-        height:85vh;
+
+    #backshadow {
+        width: 85%;
+        height: 85vh;
 
     }
 }
-@media (min-device-width:769px){
-    #backshadow{
-        width:35%;
+
+@media (min-device-width:769px) {
+    #backshadow {
+        width: 35%;
     }
 }
-#firstImage{
-   background-repeat: no-repeat;
-   background-size: 100%;
+
+#welcomeText {
+    font-family: QuickSand;
+    font-weight: bold;
+    color: white;
+}
+
+#firstImage {
+    background-repeat: no-repeat;
+    background-size: 100%;
 
 }
-#generaltext{
+
+#generaltext {
     font-family: QuickSand;
     color: #00357A;
     font-weight: bold;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
-#generaltextwhite{
+
+#generaltextwhite {
     font-family: QuickSand;
     color: #ffffff;
     font-weight: bold;
 }
-.link{
+
+#subtext {
+    width: 250px;
+    font-family: QuickSand;
+    color: #00357A;
+}
+
+#footer {
+    background-color: #1498D6;
+    color: white;
+    font-family: QuickSand;
+    margin-top: 3%;
+}
+
+#logoFooter {
+    width: 150px;
+    margin-bottom: 2%;
+}
+
+.link {
     text-decoration: none;
     color: white;
 }
-#btnlogin, #btnregister, #btnknowmore{
+
+#btnlogin,
+#btnregister,
+#btnknowmore {
     background-color: #1498D6;
-    color:white;
+    color: white;
     font-family: QuickSand;
     font-weight: bold;
     border-radius: 5px;
     border: none;
     height: 40px;
 }
-#lettering{
+
+#lettering {
     font-family: QuickSand;
     color: #00357A;
 }
+
+/* activity */
 .container1 {
     position: relative;
     width: 287px;
 }
-  
+
 .imagecategory {
     width: 287px;
     height: auto;
 }
+
 .textcategory {
     color: white;
     font-size: 40px;
@@ -89,6 +140,7 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
 .overlayactivity {
     position: absolute;
     bottom: 0;
@@ -102,14 +154,15 @@
     transition: .5s ease;
     border-radius: 5px;
 }
-  
+
 .container1:hover .overlayactivity {
     opacity: 1;
 }
-#button{
+
+#button {
     font-family: QuickSand;
     font-weight: 700;
-    color:#1498D6;
+    color: #1498D6;
     background-color: white;
     border-radius: 5px;
     position: absolute;
@@ -118,30 +171,32 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-#detailactivity{
-    color:#1498D6;
+
+#detailactivity {
+    color: #1498D6;
     font-family: QuickSand;
     border-radius: 5px;
     box-shadow: 0px 2px 2px grey;
 }
+
 /*Atividades já categorizadas*/
 .card-custom {
     overflow: hidden;
     min-height: 450px;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-  }
-  
-  .card-custom-img {
+}
+
+.card-custom-img {
     height: 200px;
     min-height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-color: inherit;
-  }
-  
-  /* First border-left-width setting is a fallback */
-  .card-custom-img::after {
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
     position: absolute;
     content: '';
     top: 161px;
@@ -158,14 +213,25 @@
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: inherit;
-  }
-  
-  .card-custom-avatar img {
-    border-radius:0px;
-    
+}
+
+.card-custom-avatar img {
+    border-radius: 0px;
+
     position: absolute;
     top: 100px;
     left: 1.25rem;
     width: 100px;
     height: 100px;
-  }
+}
+
+/*admin Page*/
+table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+th,
+td {
+    border: 1px solid black;
+}
