@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-sm-3" style="background-color:white;text-align: center;border-radius: 5px;max-height: 700px;">
           <img src="/img/Imagem 15.png" alt="">
-            <h4 style="font-weight: bold;">Username</h4>
+            <h4 style="font-weight: bold;" id="cardUsername">Username</h4>
             <hr>
             <p>Nível:51</p>
             <div class="chart">
@@ -51,7 +51,7 @@
             <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf234 Alterar Avatar</button>
             <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf07a Loja</button>
             <hr>
-            <button class="btn btn-dark mb-2">Gerir Website</button>
+            <a href="adminUserPage.html" class="btn btn-dark mb-2" id="managerWebsite">Gerir Website</a>
             <button class="btn btn-danger mb-2" id="btnLogout">Terminar Sessão</button>
         </div>
         <div class="col-sm-1"></div>
@@ -59,35 +59,35 @@
           <div class="row">
             <div class="col-sm-12 mb-2 mt-2" style="background-color: white;border-radius: 5px;">
               <h3 class="mb-3 mt-2">Dados do Utilizador</h3>
-              <form id="frmRegister">
+              <form id="frmChangePassword">
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Username:</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" >
+                    <input type="text" id="profileUsername"class="form-control" readonly >
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Password:</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" >
+                    <input id="profilePassword" type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Email:</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" >
+                    <input id="profileEmail" type="email" class="form-control" readonly>
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Aniversário:</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control" >
+                    <input id="profileBth"type="date" class="form-control" readonly >
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Género:</label>
                   <div class="col-sm-10">
-                    <select class="form-select">
+                    <select id="profileGender"class="form-select" disabled>
                       <option selected>Selecione</option>
                       <option value="Feminino">Feminino</option>
                       <option value="Masculino">Masculino</option>
@@ -95,7 +95,7 @@
                   </div>
                 </div>
                 <div class="text-end">
-                <input type="submit" value="Alterar Dados" class="btn btn-primary mb-3 mt-2" style="font-weight: bold;">
+                <input type="submit" class="btn btn-primary mb-3 mt-2" style="font-weight: bold;" value="Alterar Password"></input>
                 </div>
               </form>
             </div>
@@ -107,64 +107,66 @@
             </div>
             <div class="col-sm-12 mb-2 mt-2" style="background-color:white;border-radius: 5px;">
               <h3 class="mb-3 mt-2">Preferências</h3>
-              <form>
+              <form id="frmPreferences">
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Desempenhar:</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="selectDo"aria-label="Default select example">
                       <option selected>Selecionar</option>
-                      <option value="1">Individualmente</option>
-                      <option value="2">Agrupado</option>
+                      <option value="Individualmente">Individualmente</option>
+                      <option value="Agrupado">Agrupado</option>
                   </select>
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Dificuldade:</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="selectDifficulty" aria-label="Default select example">
                       <option selected>Selecionar</option>
-                      <option value="1">Fácil</option>
-                      <option value="2">Médio</option>
-                      <option value="3">Díficil</option>
+                      <option value="Fácil">Fácil</option>
+                      <option value="Médio">Médio</option>
+                      <option value="Díficil">Díficil</option>
                   </select>
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Duração:</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="selectDuration" aria-label="Default select example">
                       <option selected>Selecionar</option>
-                      <option value="1">Inferior a 20 minutos</option>
-                      <option value="2">Inferior a 1 hora</option>
-                      <option value="3">Inferior a 2 horas</option>
+                      <option value="Inferior a 20 minutos">Inferior a 20 minutos</option>
+                      <option value="Inferior a 1 hora">Inferior a 1 hora</option>
+                      <option value="Inferior a 2 horas">Inferior a 2 horas</option>
                   </select>
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Recursos:</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="selectResources" aria-label="Default select example">
                       <option selected>Selecionar</option>
-                      <option value="1">Poucos</option>
-                      <option value="2">Alguns</option>
-                      <option value="3">Muitos</option>
+                      <option value="Poucos">Poucos</option>
+                      <option value="Alguns">Alguns</option>
+                      <option value="Muitos">Muitos</option>
                   </select>
                   </div>
                 </div>
                 <div class="form-group row mb-3">
                   <label for="" class="col-sm-2 col-form-label">Categorias:</label>
                   <div class="col-sm-10">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" id="selectFavorites" aria-label="Default select example">
                       <option selected>Selecionar</option>
-                      <option value="1">Bricolage</option>
-                      <option value="2">Culinária</option>
-                      <option value="3">Desporto</option>
-                      <option value="4">Línguas</option>
-                      <option value="5">Viajar</option>
+                      <option value="Bricolage">Bricolage</option>
+                      <option value="Culinária">Culinária</option>
+                      <option value="Desporto">Desporto</option>
+                      <option value="Línguas">Línguas</option>
+                      <option value="Viajar">Viajar</option>
                   </select>
                   </div>
                 </div>
-                <input type="submit" value="Submeter" class="btn btn-primary mb-4 mt-4" style="font-weight: bold;">
+                <div class="text-end">
+                <input type="submit" value="Submeter Alterações" class="btn btn-primary mb-4 mt-4" style="font-weight: bold;">
+                </div>
               </form>
             </div>
             <!--Div row-->

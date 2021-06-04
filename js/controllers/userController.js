@@ -4,9 +4,9 @@ export default class UserController {
     constructor() {
         this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
     }
-    register(username, password) {
+    register(username, password,email,databth,gender) {
         if (!this.users.some(user => user.username === username)) {
-            this.users.push(new UserModel(username, password));
+            this.users.push(new UserModel(username, password,email,databth,gender));
             localStorage.setItem('users', JSON.stringify(this.users))
         } else {
             throw Error(`User with username "${username}" already exists!`);
@@ -24,5 +24,47 @@ export default class UserController {
     }
     logout() {
         sessionStorage.removeItem('loggedUser')
+    }
+    isAdmin(){
+        const name=sessionStorage.getItem('loggedUser')
+        return this.users.some(user=>user.username==name && user.type=='admin')
+    }
+    myData(){
+        const dates=[];
+        const name1=sessionStorage.getItem('loggedUser')
+        const myClass=this.users.find(user=>user.username==name1)
+        dates.push(myClass.username,myClass.password,myClass.email,myClass.databth,myClass.gender,myClass.do,myClass.difficulty,myClass.duration,myClass.resources,myClass.favorites)
+        return dates
+    }
+    changePassword(newPassword){
+        const myUser=sessionStorage.getItem('loggedUser')
+        const myClass1=this.users.find(user=>user.username==myUser)
+        myClass1.password=newPassword
+        this.users=this.users.filter(user=>user.username!=myUser)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    changePreferences(todo,difficulty,duration,resources,favorites){
+        const myUser=sessionStorage.getItem('loggedUser')
+        const myClass1=this.users.find(user=>user.username==myUser)
+        myClass1.do=todo;
+        myClass1.difficulty=difficulty;
+        myClass1.duration=duration;
+        myClass1.resources=resources;
+        myClass1.favorites=favorites;
+        this.users=this.users.filter(user=>user.username!=myUser)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    getUsers(){
+        this.data=[]
+        for (const user of this.users) {
+            this.data.push(user)
+        }
+        return this.data
+    }
+    //Função que irá permitir apagar o utilizador
+    dellUser(user){
+        console.log(user);
     }
 }

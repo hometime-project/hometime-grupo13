@@ -5,6 +5,7 @@ import activityView from './views/activityView.js'
 import profilePageView from './views/profilePageView.js'
 import helpStruturView from './views/helpStruturView.js'
 import registerView from './views/registerView.js'
+import adminUserPageView from './views/adminUserPageView.js'
 class App {
     constructor() {
         // Mapeamento entre os ficheiros HTML e as views que estes vão carregar
@@ -30,6 +31,9 @@ class App {
             ],
             'register':[
                 registerView
+            ],
+            'adminUserPage':[
+                adminUserPageView
             ]
             
         };
@@ -63,27 +67,27 @@ class App {
                 username: 'user1',
                 password: 'pass1',
                 email: 'email1@gmail.com',
-                databth: '01-01-2000',
-                gender: 'm',
+                databth: '2000-01-01',
+                gender: 'Masculino',
                 type: 'user',
-
-                difficulty: 'easy',
-                duration: '20min',
-                resources: 'none',
-                favorites: ['linguas']
+                do:'Individualmente',
+                difficulty: 'Fácil',
+                duration: 'Inferior a 2 horas',
+                resources: 'Poucos',
+                favorites: 'Viajar'
             },
             {
                 username: 'admin',
                 password: 'admin',
                 email: 'email1@gmail.com',
-                databth: '02-02-2000',
-                gender: 'f',
+                databth: '2000-02-02',
+                gender: 'Feminino',
                 type: 'admin',
-
-                difficulty: 'hard',
-                duration: '1h',
-                resources: 'some',
-                favorites: ['linguas', 'bricolage']
+                do: 'Individualmente',
+                difficulty: 'Fácil',
+                duration: 'Inferior a 2 horas',
+                resources: 'Poucos',
+                favorites: 'Bricolage'
             }
 
         ];

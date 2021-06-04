@@ -5,7 +5,8 @@ export default class UserModel {
         this.password = password
         this.databth=databth
         this.gender=gender
-        this.type = 'user' 
+        this.type = 'user'
+        this.do='0' 
         this.difficulty='0'
         this.duration='0'
         this.resources='0'
