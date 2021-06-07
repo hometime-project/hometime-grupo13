@@ -11,7 +11,10 @@
     padding-right: 25px;
 }
 
-#disablelink,#btnautent,#btndesautent,#linklog {
+#disablelink,
+#btnautent,
+#btndesautent,
+#linklog {
     text-decoration: none;
     color: white;
     font-family: QuickSand;
@@ -235,3 +238,56 @@ th,
 td {
     border: 1px solid black;
 }
+
+
+/*
+filtros
+
+.overlayFilter {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlayFilter #filter {
+    margin: 20px;
+    padding: 8px;
+    font-size: 24px;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    top: 150px;
+}
+
+.overlayFilter a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlayFilter .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+*/
