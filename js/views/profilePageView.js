@@ -76,14 +76,12 @@ export default class UserView {
         }
         //Função que irá permitir alterar os dados das preferencias
         changePreferences(){
-            this.frmPreferences.addEventListener("submit",function(event){
+            this.frmPreferences.addEventListener("submit",(event)=>{
                 event.preventDefault()
                 this.result=confirm("Confirma a alteração?")
                 if(this.result==true){
-                    try {
-                        this.userController.changePreferences(this.selectDo.value,this.selectDifficulty.value,this.selectDuration,this.selectResources,this.selectFavorites.value)
-                    } catch{}
-                }
+                     this.userController.changePreferences(this.selectDo.value,this.selectDifficulty.value,this.selectDuration.value,this.selectResources.value,this.selectFavorites.value)
+                    } 
             })
         }
 

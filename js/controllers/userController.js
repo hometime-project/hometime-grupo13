@@ -64,7 +64,34 @@ export default class UserController {
         return this.data
     }
     //Função que irá permitir apagar o utilizador
-    dellUser(user){
-        console.log(user);
+    dellUser(name){
+        this.users = this.users.filter(user => user.username != name)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    changeDataUser(username1,email,databth,gender){
+        const myClass1=this.users.find(user=>user.username==username1)
+        myClass1.email=email;
+        myClass1.databth=databth;
+        myClass1.gender=gender;
+        this.users=this.users.filter(user=>user.username!=username1)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    //Alterar tipo de utilizador
+    changeType(type,username1){
+        const myClass1=this.users.find(user=>user.username==username1)
+        myClass1.type=type;
+        this.users=this.users.filter(user=>user.username!=username1)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    //Ordernar por Nome
+    orderByName(){
+        this.data=[]
+        for (const user of this.users) {
+            this.data.push(user)
+        }
+        this.data.sort((a, b) => (a.username > b.username) ? 1 : -1)
+        return this.data
     }
 }
