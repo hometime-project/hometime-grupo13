@@ -1,8 +1,10 @@
 import UserController from '../controllers/userController.js'
+import activityController from '../controllers/activitiesController.js'
 
 export default class UserView {
     constructor() {
         this.userController = new UserController();
+        this.activityController= new activityController();
         //Administrador
         this.buttonManager=document.querySelector("#managerWebsite")
         // Terminar Sessão
@@ -22,6 +24,13 @@ export default class UserView {
         this.selectResources=document.querySelector("#selectResources")
         this.selectFavorites=document.querySelector("#selectFavorites")
         this.frmPreferences=document.querySelector("#frmPreferences")
+        //Estatisticas
+        this.sectionStactics=document.querySelector("#sectionStatics")
+        //Ranking
+        this.sectionRanking=document.querySelector("#tableRanking")
+        //Nível e Coins
+        this.coinsProfile=document.querySelector("#coinsProfile")
+        this.levelProfile=document.querySelector("#levelProfile")
         //Funções
         this.updateStatusUI();
         this.checkType();
@@ -29,7 +38,9 @@ export default class UserView {
         this.changePassword();
         this.changePreferences();
         this.bindLogout();
-
+        this.seeStatistics();
+        this.tableRanking();
+        this.gamifyElements();
     }
        /**
      * Função que verifica a autenticação
@@ -94,5 +105,119 @@ export default class UserView {
             location.href="../index.html"
         })
     }
-
+    //Preencher as estatisticas
+    seeStatistics(){
+        this.list=this.userController.getUser()
+        this.resultList=this.activityController.getTotal(this.list.alreadySee)
+        this.category=["Total","Bricolage","Culinária","Desporto","Línguas","Viajar"]
+        this.first=0
+        this.second=1
+        this.content=""
+        for (const category of this.category) {
+            if(this.resultList[this.first]==0){
+                this.numb=0
+                this.first+=2
+                this.second+=2
+                this.content+=` <div class="form-group row mb-3">
+                <label for="" class="col-sm-2 col-form-label">${category} </label>
+                <div class="col-sm-10 align-self-center">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${this.numb}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${this.numb}%</div>
+                  </div>
+                </div>
+              </div>`
+            }
+            else if(this.resultList[this.first]>this.resultList[this.second]){
+                this.numb=100
+                this.first+=2
+                this.second+=2
+                this.content+=` <div class="form-group row mb-3">
+                <label for="" class="col-sm-2 col-form-label">${category} </label>
+                <div class="col-sm-10 align-self-center">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${this.numb}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${this.numb}%</div>
+                  </div>
+                </div>
+              </div>`
+            }
+            else{
+            this.numb=(+this.resultList[this.first]*100)/(+this.resultList[this.second])
+            this.first+=2
+            this.second+=2
+            this.content+=` <div class="form-group row mb-3">
+                <label for="" class="col-sm-2 col-form-label">${category} </label>
+                <div class="col-sm-10 align-self-center">
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: ${this.numb}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${this.numb}%</div>
+                  </div>
+                </div>
+              </div>`
+            }
+        }
+        this.sectionStactics.innerHTML=` <h3>Estatisticas</h3>`+this.content
+    }
+    tableRanking(){
+        this.myUser=this.userController.getUser()
+        this.orderUser=this.userController.listRanking()
+        this.sectionRanking.innerHTML=`<h3>Ranking</h3>`
+        this.myTable=`<table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Posição</th>
+            <th scope="col">Utilizador</th>
+            <th scope="col">Pontuação(XP)</th>
+          </tr>
+        </thead>
+        <tbody>`
+        this.position=1
+        for (const item of this.orderUser) {
+            if(item.username==this.myUser.username){
+                this.myTable+=` <tr class="bg-danger">
+                <th scope="row">${this.position}</th>
+                <td><img src="../img/Imagem 15.png" width=35px></img> ${item.username}</td>
+                <td>${item.xp}</td>
+              </tr>`
+              this.position++
+            }
+            else{
+                this.myTable+=` <tr>
+                <th scope="row">${this.position}</th>
+                <td><img src="../img/Imagem 15.png" width=35px></img> ${item.username}</td>
+                <td>${item.xp}</td>
+              </tr>`
+              this.position++
+            }
+        }
+        this.myTable+=`</tbody>
+        </table>`
+        this.sectionRanking.innerHTML+=this.myTable
+    }
+    
+    gamifyElements(){
+        this.myUser=this.userController.getUser()
+        this.coinsProfile.innerHTML=`<i class="fas fa-coins"></i> ${this.myUser.coins}`
+        this.mathh=+this.myUser.xp/1000
+        this.mathh2=Math.trunc(this.mathh)
+        this.mathh3=(this.mathh2+1)*1000
+        this.levelProfile.innerHTML=this.mathh2+1
+        this.mathh4=+this.mathh3-1000
+        this.graphic(this.mathh3,this.myUser.xp,this.mathh4)
+    }
+    graphic(max,xp,min){
+    this.myGauge = Gauge(document.getElementById("gauge-demo"),{
+        dialRadius: 40,
+        dialStartAngle: 135,
+        dialEndAngle: 45,
+        value: xp,
+        max: max,
+        min: min,
+        valueDialClass: "value",
+        valueClass: "value-text",
+        dialClass: "dial",
+        gaugeClass: "gauge",
+        showValue: true,
+        gaugeColor: null,
+    })
+    }
+  
 }

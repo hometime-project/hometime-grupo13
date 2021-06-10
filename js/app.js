@@ -6,6 +6,10 @@ import profilePageView from './views/profilePageView.js'
 import helpStruturView from './views/helpStruturView.js'
 import registerView from './views/registerView.js'
 import adminUserPageView from './views/adminUserPageView.js'
+import adminActivityView from './views/adminActivityPageView.js'
+import activityPageView from './views/activityPageView.js'
+import adminStorePage from './views/adminStorePageView.js'
+
 class App {
     constructor() {
         // Mapeamento entre os ficheiros HTML e as views que estes vão carregar
@@ -34,6 +38,15 @@ class App {
             ],
             'adminUserPage':[
                 adminUserPageView
+            ],
+            'adminActivityPage':[
+                adminActivityView
+            ],
+            'ativitypage':[
+                activityPageView
+            ],
+            'adminStorePage':[
+                adminStorePage
             ]
             
         };
@@ -74,7 +87,10 @@ class App {
                 difficulty: 'Fácil',
                 duration: 'Inferior a 2 horas',
                 resources: 'Poucos',
-                favorites: 'Viajar'
+                favorites: 'Viajar',
+                alreadySee:[],
+                coins:'0',
+                xp:'0'
             },
             {
                 username: 'admin',
@@ -87,14 +103,65 @@ class App {
                 difficulty: 'Fácil',
                 duration: 'Inferior a 2 horas',
                 resources: 'Poucos',
-                favorites: 'Bricolage'
+                favorites: 'Bricolage',
+                alreadySee:[],
+                coins:'0',
+                xp:'0'
             }
 
         ];
+
+        const activities=[
+            {
+                name:'Inglês (Nível I)',
+                image:'https://cleandye.com/wp-content/uploads/2020/01/English-icon.png',
+                video:'https://www.youtube.com/embed/cC2vxmBDAG8',
+                description:'Esta atividade tem como objetivo dar a possibilidade ao utilizador de aprender a falar inglês. Esta primeira aula consiste na pronuncia de frases aleatórias.',
+                year:'2021',
+                doActivity:'Individualmente',
+                difficultyLevel:'Fácil',
+                durationActivity:'Inferior a 2 horas',
+                resourcesActivity:'Poucos',
+                categoryActivity:'Línguas',
+                coinsActivity:'10',
+                xpActivity:'100',
+                likes:[],
+                comments:[]
+            },
+            {
+                name:'Inglês (Nível II)',
+                image:'https://cleandye.com/wp-content/uploads/2020/01/English-icon.png',
+                video:'https://www.youtube.com/embed/cC2vxmBDAG8',
+                description:'Esta atividade tem como objetivo dar a possibilidade ao utilizador de aprender a falar inglês. Esta primeira aula consiste na pronuncia de frases aleatórias.',
+                year:'2021',
+                doActivity:'Individualmente',
+                difficultyLevel:'Fácil',
+                durationActivity:'Inferior a 2 horas',
+                resourcesActivity:'Poucos',
+                categoryActivity:'Línguas',
+                coinsActivity:'20',
+                xpActivity:'200',
+                likes:[],
+                comments:[]
+            }
+        ];
+        const store=[
+            {
+                imageStore:"aa",
+                levelStore:"bb",
+                coinsStore:"cc"
+            }
+        ]
  
         // Load the fixtures in case there is no data in the local storage 
         if (!localStorage.users) {
             localStorage.setItem('users', JSON.stringify(users));
+        }
+        if (!localStorage.activities) {
+            localStorage.setItem('activities', JSON.stringify(activities));
+        }
+        if(!localStorage.store){
+            localStorage.setItem("store",JSON.stringify(store))
         }
     }
 }

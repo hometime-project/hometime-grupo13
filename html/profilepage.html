@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="/css/style.css">
     <title>Hometime:Perfil</title>
@@ -38,18 +38,18 @@
       <div class="container"> 
       <div class="container" style="color:#00357A;font-family: QuickSand;">
       <div class="row">
-        <div class="col-sm-3" style="background-color:white;text-align: center;border-radius: 5px;max-height: 700px;">
+        <div class="col-sm-3" style="background-color:white;text-align: center;border-radius: 5px;height:775px">
           <img src="/img/Imagem 15.png" alt="">
             <h4 style="font-weight: bold;" id="cardUsername">Username</h4>
             <hr>
-            <p>Nível:51</p>
-            <div class="chart">
-                <canvas id="gauge"></canvas>
+            <p>Nível: <span id="levelProfile"></span></p>
+            <div>
+            <div id="gauge-demo" class="gauge-container w-75" style="margin-left:12.5%"></div>
             </div>
-            <p style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf51e 5000</p>
+            <p style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;" id="coinsProfile"></p>
             <hr>
             <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf234 Alterar Avatar</button>
-            <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf07a Loja</button>
+            <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;" data-bs-toggle="modal" data-bs-target="#exampleModal">&#xf07a Loja</button>
             <hr>
             <a href="adminUserPage.html" class="btn btn-dark mb-2" id="managerWebsite">Gerir Website</a>
             <button class="btn btn-danger mb-2" id="btnLogout">Terminar Sessão</button>
@@ -99,11 +99,36 @@
                 </div>
               </form>
             </div>
-            <div class="col-sm-12 mb-2 mt-2" style="background-color: white;border-radius: 5px;">
-              <h3>Estatisticas</h3>
+            <div class="col-sm-12 mb-2 mt-2" style="background-color: white;border-radius: 5px;" id="sectionStatics">
             </div>
-            <div class="col-sm-12 mb-2 mt-2" style="background-color: white;border-radius: 5px;">
+            <div class="col-sm-12 mb-2 mt-2" style="background-color: white;border-radius: 5px;" id="tableRanking">
               <h3>Ranking</h3>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Utilizador</th>
+                    <th scope="col">Pontuação(XP)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><img src="../img/Imagem 15.png" width=35px></img> Username</td>
+                    <td>5000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry the Bird</td>
+                    <td>Larry the Bird</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="col-sm-12 mb-2 mt-2" style="background-color:white;border-radius: 5px;">
               <h3 class="mb-3 mt-2">Preferências</h3>
@@ -174,11 +199,34 @@
         </div>
         <!--Div row-->
       </div>
-      
         <!--Divs Containers-->
       </div>
       </div>
     </section>
+    <!--Modal Loja-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: QuickSand;color:#1498D6">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-sm-12">
+              <h4 class="text-center">Loja</h4>
+            </div>
+            <div class="col-sm-3 align-self-center">
+              <div class="card text-center" style="width: 11rem;">
+                <img src="../img/Imagem 15.png" class="card-img-top align-self-center" style="width:150px" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center"><i class="fas fa-coins"></i> <span> 254</span></p>
+                  <button class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container-fluid footer" style="background-color: #1498D6;color:white;font-family: QuickSand; margin-top: 3%;">
         <div class="row">
@@ -213,6 +261,7 @@
         </div> 
      </footer>
      <script type="module" src="../js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     <script src="../js/gauge.min.js"></script>
   </body>
 </html>

@@ -94,4 +94,28 @@ export default class UserController {
         this.data.sort((a, b) => (a.username > b.username) ? 1 : -1)
         return this.data
     }
+    //Buscar todos os dados relativos ao utilizador
+    getUser(){
+        this.myUser=sessionStorage.getItem('loggedUser')
+        this.myDetailUser=this.users.find(user=>user.username===this.myUser)
+        return this.myDetailUser
+    }
+    //Adicionar à lista de visualizações
+    addSeeList(nameSee,coins,xp){
+        this.myUser=sessionStorage.getItem('loggedUser')
+        const myClass1=this.users.find(user=>user.username==this.myUser)
+        myClass1.alreadySee.push(nameSee)
+        myClass1.coins=+coins+ +myClass1.coins
+        myClass1.xp=+xp+ +myClass1.xp
+        this.users=this.users.filter(user=>user.username!=this.myUser)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+        
+    }
+    listRanking(){
+        this.myList=this.users
+        this.myList.sort((a, b) => (a.xp < b.xp) ? 1 : -1)
+        return this.myList
+
+    }
 }

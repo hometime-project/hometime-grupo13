@@ -1,17 +1,20 @@
-export default class activitiesModel {
+export default class ActivitiesModel {
 
-    constructor(type, name, image, details, necessities, time, members, createdTime, videos, comments){
-        this.type = type
+    constructor(name, image, video, description, year, doActivity, difficultyLevel, durationActivity, resourcesActivity, categoryActivity,coinsActivity,xpActivity){
         this.name = name
         this.image = image
-        this.details = details
-        this.necessities = necessities
-        this.time = time
-        this.members = members
-        this.createdTime = createdTime
-
-        this.videos = videos
-        this.comments = comments
+        this.video = video
+        this.description = description
+        this.year = year
+        this.doActivity = doActivity
+        this.difficultyLevel = difficultyLevel
+        this.durationActivity = durationActivity
+        this.resourcesActivity = resourcesActivity
+        this.categoryActivity = categoryActivity
+        this.coinsActivity=coinsActivity 
+        this.xpActivity=xpActivity
+        this.likes=[]
+        this.comments=[]
         
     }
 } 

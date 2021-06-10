@@ -11,5 +11,9 @@ export default class UserModel {
         this.duration='0'
         this.resources='0'
         this.favorites = '0'
+        this.alreadySee=[]
+        this.coins='0'
+        this.xp='0'
+
     }
 }

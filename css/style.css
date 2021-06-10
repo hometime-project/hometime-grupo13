@@ -225,13 +225,26 @@
     height: 100px;
 }
 
-/*admin Page*/
-table {
-    width: 100%;
-    border: 1px solid black;
+@media (max-device-width:812px) {
+  .sizevideo{
+      height:300px;
+  }
 }
+.gauge-container > .gauge > .dial {
+    stroke: #334455;
+    stroke-width: 2;
+  }
+  
+  .gauge-container > .gauge > .value {
+    stroke: rgb(47, 227, 255);
+    stroke-width: 2;
+  }
+  
+  .gauge-container > .gauge > .value-text {
+    fill: rgb(47, 227, 255);
+    font-family: sans, 'sans-serif';
+    font-weight: bold;
+    font-size: 0.6em;
+  }
+  
 
-th,
-td {
-    border: 1px solid black;
-}
