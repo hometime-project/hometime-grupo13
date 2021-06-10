@@ -11,7 +11,10 @@
     padding-right: 25px;
 }
 
-#disablelink,#btnautent,#btndesautent,#linklog {
+#disablelink,
+#btnautent,
+#btndesautent,
+#linklog {
     text-decoration: none;
     color: white;
     font-family: QuickSand;
@@ -246,5 +249,3 @@
     font-weight: bold;
     font-size: 0.6em;
   }
-  
-
