@@ -1,10 +1,12 @@
 import UserController from '../controllers/userController.js'
 import activityController from '../controllers/activitiesController.js'
+import storeController from '../controllers/storeController.js'
 
 export default class UserView {
     constructor() {
         this.userController = new UserController();
         this.activityController= new activityController();
+        this.storeController= new storeController();
         //Administrador
         this.buttonManager=document.querySelector("#managerWebsite")
         // Terminar Sessão
@@ -31,6 +33,12 @@ export default class UserView {
         //Nível e Coins
         this.coinsProfile=document.querySelector("#coinsProfile")
         this.levelProfile=document.querySelector("#levelProfile")
+        //Loja
+        this.store=document.querySelector("#storeBody")
+        //Biblioteca
+        this.library=document.querySelector("#libraryBody")
+        //Imagem 
+        this.picture=document.querySelector("#pictureProfile")
         //Funções
         this.updateStatusUI();
         this.checkType();
@@ -41,6 +49,8 @@ export default class UserView {
         this.seeStatistics();
         this.tableRanking();
         this.gamifyElements();
+        this.showProducts();
+        this.showLibrary();
     }
        /**
      * Função que verifica a autenticação
@@ -174,7 +184,7 @@ export default class UserView {
             if(item.username==this.myUser.username){
                 this.myTable+=` <tr class="bg-danger">
                 <th scope="row">${this.position}</th>
-                <td><img src="../img/Imagem 15.png" width=35px></img> ${item.username}</td>
+                <td><img src="${item.picture}" width=35px></img> ${item.username}</td>
                 <td>${item.xp}</td>
               </tr>`
               this.position++
@@ -182,7 +192,7 @@ export default class UserView {
             else{
                 this.myTable+=` <tr>
                 <th scope="row">${this.position}</th>
-                <td><img src="../img/Imagem 15.png" width=35px></img> ${item.username}</td>
+                <td><img src="${item.picture}" width=35px></img> ${item.username}</td>
                 <td>${item.xp}</td>
               </tr>`
               this.position++
@@ -195,12 +205,13 @@ export default class UserView {
     
     gamifyElements(){
         this.myUser=this.userController.getUser()
-        this.coinsProfile.innerHTML=`<i class="fas fa-coins"></i> ${this.myUser.coins}`
+        this.coinsProfile.innerHTML=`<i class="fas fa-coins"></i> <span id="nCoins">${this.myUser.coins}</span>`
         this.mathh=+this.myUser.xp/1000
         this.mathh2=Math.trunc(this.mathh)
         this.mathh3=(this.mathh2+1)*1000
         this.levelProfile.innerHTML=this.mathh2+1
         this.mathh4=+this.mathh3-1000
+        this.picture.src=this.myUser.picture
         this.graphic(this.mathh3,this.myUser.xp,this.mathh4)
     }
     graphic(max,xp,min){
@@ -219,5 +230,113 @@ export default class UserView {
         gaugeColor: null,
     })
     }
-  
+    showProducts(){
+      this.products=this.storeController.getProducts()
+      this.myUser=this.userController.getUser()
+      this.finalList=""
+      this.nCoins=document.querySelector("#nCoins")
+      console.log(this.coinsProfile.innerHTML);
+      this.store.innerHTML=`<div class="col-sm-12">
+      <h4 class="text-center">Loja</h4>
+    </div>`
+      for (const product of this.products) {
+        if(+product.levelStore>+this.levelProfile.innerHTML){
+          this.finalList+=`<div class="col-sm-3 align-self-center">
+        <div class="card text-center" style="width: 11rem;">
+          <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center"><i class="fas fa-coins"></i> <span>${product.coinsStore}</span></p>
+            <button class="btn btn-primary" disabled="true">Disponível (Nível:${product.levelStore})</button>
+          </div>
+        </div>
+      </div>`
+        }
+        else if(this.myUser.avatars.some(element=>element==product.imageStore)==true){
+        this.finalList+=`<div class="col-sm-3 align-self-center">
+        <div class="card text-center" style="width: 11rem;">
+          <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center"><i class="fas fa-coins"></i> <span>${product.coinsStore}</span></p>
+            <button class="btn btn-primary" disabled="true">Adquirido</button>
+          </div>
+        </div>
+      </div>`
+      }
+      else if(+product.coinsStore>+this.nCoins.innerHTML){
+        this.finalList+=`<div class="col-sm-3 align-self-center">
+        <div class="card text-center" style="width: 11rem;">
+          <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center"><i class="fas fa-coins"></i> <span>${product.coinsStore}</span></p>
+            <button class="btn btn-primary" disabled="true">Comprar</button>
+          </div>
+        </div>
+      </div>`
+      }
+      else{
+        this.finalList+=`<div class="col-sm-3 align-self-center">
+        <div class="card text-center" style="width: 11rem;">
+          <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
+          <div class="card-body">
+            <p class="card-text text-center"><i class="fas fa-coins"></i> <span>${product.coinsStore}</span></p>
+            <button class="btn btn-primary" name="${product.imageStore}" id="buyAvatar">Comprar</button>
+          </div>
+        </div>
+      </div>`
+      }
+    }
+      this.store.innerHTML+=this.finalList+`</div>`
+      this.buy()
+  }
+  buy(){
+    this.btnBuy=document.querySelectorAll("#buyAvatar")
+    for (const btn of this.btnBuy) {
+      btn.addEventListener("click",event=>{
+        this.product=this.storeController.getProduct(btn.name)
+        this.userController.buyAvatar(btn.name,this.product.coinsStore)
+        this.showProducts()
+        setTimeout(() => { location.reload() }, 3000);
+      })
+    }
+  }
+  showLibrary(){
+    this.list=this.userController.getUser()
+    this.library.innerHTML=`<div class="col-sm-12">
+    <h4 class="text-center">Biblioteca</h4>
+  </div>`
+    this.avatarList=''
+    for (const item of this.list.avatars) {
+      if(item==this.list.picture){
+        this.avatarList+=`<div class="col-sm-3 align-self-center">
+        <div class="card text-center" style="width: 11rem;">
+          <img src="${item}" class="card-img-top align-self-center" style="width:150px" alt="...">
+          <div class="card-body">
+            <button class="btn btn-primary" name="${item}" id="changePic" disabled="true">A Usar</button>
+          </div>
+        </div>
+      </div>`
+      }
+      else{
+      this.avatarList+=`<div class="col-sm-3 align-self-center">
+      <div class="card text-center" style="width: 11rem;">
+        <img src="${item}" class="card-img-top align-self-center" style="width:150px" alt="...">
+        <div class="card-body">
+          <button class="btn btn-primary" name="${item}" id="changePic">Usar</button>
+        </div>
+      </div>
+    </div>`
+      }
+    }
+    this.library.innerHTML+=this.avatarList+"</div>"
+    this.changeProfilePicture()
+  }
+  changeProfilePicture(){
+    this.btnChangePic=document.querySelectorAll("#changePic")
+    for (const btn of this.btnChangePic) {
+      btn.addEventListener("click",event=>{
+        this.userController.changePic(btn.name)
+        setTimeout(() => { location.reload() }, 3000);
+      })
+    }
+  }
 }

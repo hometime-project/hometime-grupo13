@@ -49,11 +49,13 @@ export default class ActivityView {
         this.list=datas
         this.catalogContent=""
         for (const data of datas) {
-            this.catalogContent+=`<div class="col-sm-2 mt-4 me-2">
-            <div class="card text-center" style="width: 15rem;background-color: white;border:none;">
-              <img src="${data.image}" class="card-img-top align-self-center" style="width: 175px;">
+            this.catalogContent+=`<div class="col-sm-2 mt-4 me-md-5">
+            <div class="card text-center " style="width: 15rem;background-color: white;border-color:#00357a">
+              <img src="${data.image}" class="card-img-top align-self-center mt-1" style="width: 175px;">
               <button style="font-weight: bold;font-family: QuickSand; color:#00357a;font-size: 19px;" class="btn stretched-link" name="${data.name}" id="buttonSeeDetails">${data.name}</button>
-            </div>
+              <hr>
+              <div class="d-flex justify-content-around" style="color:#00357a;font-family:QuickSand"><p>Categoria: ${data.categoryActivity}</p><p><i class="fas fa-thumbs-up"></i> ${data.likes.length}</p></div>   
+              </div>
           </div>`
         }
         this.catalog.innerHTML=this.catalogContent
@@ -109,10 +111,13 @@ export default class ActivityView {
                 this.renderCatalog(this.list)
             }
             else if(this.selectOrder.value=="UpLike"){
+                this.list.sort((a, b) => (a.likes.length > b.likes.length) ? 1 : -1)
+                this.renderCatalog(this.list)
 
             }
             else if(this.selectOrder.value=="DownLike"){
-
+                this.list.sort((a, b) => (a.likes.length < b.likes.length) ? 1 : -1)
+                this.renderCatalog(this.list)
             }
             else if(this.selectOrder.value=="UpLevel"){
                 this.hard=this.list.filter(listt=>listt.difficultyLevel=="Díficil")

@@ -14,6 +14,8 @@ export default class UserModel {
         this.alreadySee=[]
         this.coins='0'
         this.xp='0'
+        this.avatars=[]
+        this.picture="/img/Imagem 15.png"
 
     }
 }

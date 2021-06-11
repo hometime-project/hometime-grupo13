@@ -90,7 +90,9 @@ class App {
                 favorites: 'Viajar',
                 alreadySee:[],
                 coins:'0',
-                xp:'0'
+                xp:'0',
+                avatars:[],
+                picture:'../img/Imagem 15.png'
             },
             {
                 username: 'admin',
@@ -106,7 +108,9 @@ class App {
                 favorites: 'Bricolage',
                 alreadySee:[],
                 coins:'0',
-                xp:'0'
+                xp:'0',
+                avatars:[],
+                picture:'../img/Imagem 15.png'
             }
 
         ];
@@ -147,9 +151,9 @@ class App {
         ];
         const store=[
             {
-                imageStore:"aa",
-                levelStore:"bb",
-                coinsStore:"cc"
+                imageStore:"/img/Imagem 15.png",
+                levelStore:"3",
+                coinsStore:"500"
             }
         ]
  

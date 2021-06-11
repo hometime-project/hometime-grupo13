@@ -118,4 +118,21 @@ export default class UserController {
         return this.myList
 
     }
+    buyAvatar(name,coins){
+        this.myUser=sessionStorage.getItem('loggedUser')
+        const myClass1=this.users.find(user=>user.username==this.myUser)
+        myClass1.avatars.push(name)
+        myClass1.coins=(+myClass1.coins)-(+coins)
+        this.users=this.users.filter(user=>user.username!=this.myUser)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
+    changePic(name){
+        this.myUser=sessionStorage.getItem('loggedUser')
+        const myClass1=this.users.find(user=>user.username==this.myUser)
+        myClass1.picture=name
+        this.users=this.users.filter(user=>user.username!=this.myUser)
+        this.users.push(myClass1)
+        localStorage.setItem('users', JSON.stringify(this.users))
+    }
 }

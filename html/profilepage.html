@@ -39,7 +39,7 @@
       <div class="container" style="color:#00357A;font-family: QuickSand;">
       <div class="row">
         <div class="col-sm-3" style="background-color:white;text-align: center;border-radius: 5px;height:775px">
-          <img src="/img/Imagem 15.png" alt="">
+          <img src="/img/Imagem 15.png" id="pictureProfile" style="width:200px" alt="">
             <h4 style="font-weight: bold;" id="cardUsername">Username</h4>
             <hr>
             <p>Nível: <span id="levelProfile"></span></p>
@@ -48,7 +48,7 @@
             </div>
             <p style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;" id="coinsProfile"></p>
             <hr>
-            <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;">&#xf234 Alterar Avatar</button>
+            <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;" data-bs-toggle="modal" data-bs-target="#exampleModal1">&#xf234 Alterar Avatar</button>
             <button class="btn btn-primary" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: bold;" data-bs-toggle="modal" data-bs-target="#exampleModal">&#xf07a Loja</button>
             <hr>
             <a href="adminUserPage.html" class="btn btn-dark mb-2" id="managerWebsite">Gerir Website</a>
@@ -210,9 +210,33 @@
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body row" id="storeBody">
             <div class="col-sm-12">
               <h4 class="text-center">Loja</h4>
+            </div>
+            <div class="col-sm-3 align-self-center">
+              <div class="card text-center" style="width: 11rem;">
+                <img src="../img/Imagem 15.png" class="card-img-top align-self-center" style="width:150px" alt="...">
+                <div class="card-body">
+                  <p class="card-text text-center"><i class="fas fa-coins"></i> <span> 254</span></p>
+                  <button class="btn btn-primary">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Biblioteca-->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-family: QuickSand;color:#1498D6">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body row" id="libraryBody">
+            <div class="col-sm-12">
+              <h4 class="text-center">Biblioteca</h4>
             </div>
             <div class="col-sm-3 align-self-center">
               <div class="card text-center" style="width: 11rem;">
