@@ -12,6 +12,7 @@ export default class AdminStorePageView {
         this.btnSubmit=document.querySelector("#updateProduct")
         this.table=document.querySelector("table")
         this.updateStatusUI()
+        this.checkAdmin();
         this.bindRegisterForm()
         this.readData()
     }
@@ -63,6 +64,11 @@ export default class AdminStorePageView {
                 this.readData()}
                  event.preventDefault();  
             })
+        }
+    }
+    checkAdmin(){
+        if(this.userController.isAdminManager()==false){
+            location.href="profilepage.html"
         }
     }
     

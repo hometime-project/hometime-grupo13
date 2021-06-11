@@ -6,6 +6,7 @@ export default class adminActivityView {
     this.userController = new UserController();
     this.activityController= new activityController();
     this.updateStatusUI();
+    this.checkAdmin();
     this.table=document.querySelector("table")
     this.readData()
     //Elementos do Formulário
@@ -47,7 +48,6 @@ export default class adminActivityView {
         this.begin=` <tr>
         <th scope="col">#</th>
         <th scope="col">Título:</th>
-        <th scope="col">Imagem(URL):</th>
         <th scope="col">Vídeo(URL):</th>
         <th scope="col">Desempenhar:</th>
         <th scope="col">Dificuldade:</th>
@@ -58,7 +58,7 @@ export default class adminActivityView {
       </tr>`
        this.id=0
         for (const data of datas) {
-            this.begin+=`<tr><td>${this.id}</td><td>${data.name}</td><td>${data.image}</td><td>${data.video}</td><td>${data.doActivity}</td><td>${data.difficultyLevel}</td><td>${data.durationActivity}</td><td>${data.resourcesActivity}</td><td>${data.categoryActivity}</td><td><button class="btn btn-dark me-md-2 mb-2" id="editActivity">Editar</button><button class="btn btn-danger" id="dellActivity">Apagar</button></td></tr>`
+            this.begin+=`<tr><td>${this.id}</td><td>${data.name}</td><td>${data.video}</td><td>${data.doActivity}</td><td>${data.difficultyLevel}</td><td>${data.durationActivity}</td><td>${data.resourcesActivity}</td><td>${data.categoryActivity}</td><td><button class="btn btn-dark me-md-2 mb-2" id="editActivity">Editar</button><button class="btn btn-danger" id="dellActivity">Apagar</button></td></tr>`
             this.id++
         }
         this.table.innerHTML=this.begin
@@ -82,7 +82,7 @@ export default class adminActivityView {
             else{
                 this.confirm=confirm("Confirma as alterações?")
                 if(this.confirm==true){
-                this.activityController.editActivity(this.nameActivity.value,this.pictureActivity.value,this.videoActivity.value,this.descriptionActivity.value,this.yearActivity.value,this.doActivity.value,this.difficultyLevel.value,this.durationActivity.value,this.resourcesActivity.value,this.categoryActivity.value);
+                this.activityController.editActivity(this.nameActivity.value,this.pictureActivity.value,this.videoActivity.value,this.descriptionActivity.value,this.yearActivity.value,this.doActivity.value,this.difficultyLevel.value,this.durationActivity.value,this.resourcesActivity.value,this.categoryActivity.value,this.coinsActivity.value,this.xpActivity.value);
                 setTimeout(()=>{location.reload()}, 500)
                }
             }
@@ -122,6 +122,8 @@ export default class adminActivityView {
                 this.durationActivity.value=this.getDetailActivity[0].durationActivity
                 this.resourcesActivity.value=this.getDetailActivity[0].resourcesActivity
                 this.categoryActivity.value=this.getDetailActivity[0].categoryActivity
+                this.coinsActivity.value=this.getDetailActivity[0].coinsActivity
+                this.xpActivity.value=this.getDetailActivity[0].xpActivity
                 this.nameActivity.disabled='true';
                 this.btnSubmitt=document.querySelector("#addActivity")
                 if(this.btnSubmitt.value=="Adicionar Atividade"){
@@ -131,6 +133,11 @@ export default class adminActivityView {
                 }
                 event.preventDefault()
             })
+        }
+    }
+    checkAdmin(){
+        if(this.userController.isAdminManager()==false){
+            location.href="profilepage.html"
         }
     }
 

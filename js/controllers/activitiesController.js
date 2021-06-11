@@ -32,7 +32,7 @@ export default class ActivityController {
         return this.activities1
     }
     //Função q irá guardar as novas edições
-    editActivity(uname, image,video,description,year,doActivity,difficultyLevel,durationActivity,resourcesActivity,categoryActivity){
+    editActivity(uname, image,video,description,year,doActivity,difficultyLevel,durationActivity,resourcesActivity,categoryActivity,coinsActivity,xpActivity){
             const myactivity=this.activities.find(activity=>activity.name===uname)
             myactivity.image=image;
             myactivity.video=video;
@@ -43,6 +43,8 @@ export default class ActivityController {
             myactivity.durationActivity=durationActivity;
             myactivity.resourcesActivity=resourcesActivity;
             myactivity.categoryActivity=categoryActivity;
+            myactivity.coinsActivity=coinsActivity;
+            myactivity.xpActivity=xpActivity;
             this.activities11=this.activities.filter(activity=>activity.name!=uname)
             this.activities11.push(myactivity)
             localStorage.setItem('activities', JSON.stringify(this.activities11))

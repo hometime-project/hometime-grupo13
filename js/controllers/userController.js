@@ -135,4 +135,8 @@ export default class UserController {
         this.users.push(myClass1)
         localStorage.setItem('users', JSON.stringify(this.users))
     }
+    isAdminManager(){
+        this.myUser=sessionStorage.getItem('loggedUser')
+        this.myDetailUser=this.users.some(user=>user.username===this.myUser && user.type=="admin")
+    }
 }

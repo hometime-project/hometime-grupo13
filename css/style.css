@@ -248,4 +248,8 @@
     font-family: sans, 'sans-serif';
     font-weight: bold;
     font-size: 0.6em;
+}
+#map {
+    height: 500px;
+    border-radius: 5px;
   }

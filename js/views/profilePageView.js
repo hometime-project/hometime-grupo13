@@ -235,7 +235,6 @@ export default class UserView {
       this.myUser=this.userController.getUser()
       this.finalList=""
       this.nCoins=document.querySelector("#nCoins")
-      console.log(this.coinsProfile.innerHTML);
       this.store.innerHTML=`<div class="col-sm-12">
       <h4 class="text-center">Loja</h4>
     </div>`

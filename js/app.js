@@ -9,7 +9,7 @@ import adminUserPageView from './views/adminUserPageView.js'
 import adminActivityView from './views/adminActivityPageView.js'
 import activityPageView from './views/activityPageView.js'
 import adminStorePage from './views/adminStorePageView.js'
-
+import adminHelpStructurPageView from './views/adminHelpStructurPageView.js'
 class App {
     constructor() {
         // Mapeamento entre os ficheiros HTML e as views que estes vão carregar
@@ -47,6 +47,9 @@ class App {
             ],
             'adminStorePage':[
                 adminStorePage
+            ],
+            'adminHelpStrucuturPage':[
+                adminHelpStructurPageView
             ]
             
         };
@@ -155,6 +158,19 @@ class App {
                 levelStore:"3",
                 coinsStore:"500"
             }
+        ];
+        const helpStructurs=[
+            {
+                name:"StayCalm",
+                image:"/img/Imagem 15.png",
+                phone:"911234567",
+                lat:"41.3018331",
+                long:"-7.7971446",
+                street:"Rua D.Sancho I",
+                distrit:"Porto",
+                hours:"9:00-18:00",
+                days:"Segunda-Sexta"
+            }
         ]
  
         // Load the fixtures in case there is no data in the local storage 
@@ -166,6 +182,9 @@ class App {
         }
         if(!localStorage.store){
             localStorage.setItem("store",JSON.stringify(store))
+        }
+        if(!localStorage.helpStructurs){
+            localStorage.setItem("helpStructurs",JSON.stringify(helpStructurs))
         }
     }
 }

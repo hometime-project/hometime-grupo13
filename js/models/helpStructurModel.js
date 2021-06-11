@@ -1,11 +1,14 @@
 export default class helpStructur {
 
-    constructor(name, image, address, phoneNumber, openHours){
+    constructor(name, image, phone, lat, long,street,distrit,hours,days){
         this.name = name
         this.image = image
-        this.address = address
-        this.phoneNumber = phoneNumber
-        
-        this.openHours = openHours
+        this.phone = phone
+        this.lat = lat
+        this.long=long
+        this.street = street 
+        this.distrit=distrit 
+        this.hours=hours 
+        this.days=days
     }
 } 

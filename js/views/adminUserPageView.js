@@ -13,6 +13,7 @@ export default class UserView {
         this.rAdminGender=document.querySelector("#adminGender")
         this.registerMessage = document.querySelector('#registerMessage')
         this.updateStatusUI();
+        this.checkAdmin();
         this.bindRegisterForm();
         this.readData()
         this.dellButton=document.querySelectorAll("#dellAccount")
@@ -169,7 +170,11 @@ export default class UserView {
             this.readData()
         })
     } 
-        
+    checkAdmin(){
+        if(this.userController.isAdminManager()==false){
+            location.href="profilepage.html"
+        }
+    }  
         
     
 }
