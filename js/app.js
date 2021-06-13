@@ -16,6 +16,17 @@ class App {
         this.routes = {
             '': [
                 logView,
+                navView,
+                footerView,
+                activityView,
+                profilePageView,
+                helpStruturView,
+                registerView,
+                adminUserPageView,
+                adminActivityView,
+                activityPageView,
+                adminStorePage,
+                adminHelpStructurPageView
             ],
             'index':[
                 navView,
