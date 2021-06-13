@@ -1,6 +1,6 @@
 import UserController from '../controllers/userController.js'
 import helpStructurController from '../controllers/helpStructurController.js'
-export default class UserView {
+export default class HelpStruturView {
     constructor() {
         this.userController = new UserController();
         this.helpStructurController = new helpStructurController();

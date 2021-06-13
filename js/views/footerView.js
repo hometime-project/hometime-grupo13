@@ -1,6 +1,6 @@
 import UserController from '../controllers/userController.js'
 
-export default class UserView {
+export default class FooterView {
     constructor() {
         this.userController = new UserController();
         this.autentButton=document.querySelector("#footDesautent")

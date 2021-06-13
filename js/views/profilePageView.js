@@ -2,7 +2,7 @@ import UserController from '../controllers/userController.js'
 import activityController from '../controllers/activitiesController.js'
 import storeController from '../controllers/storeController.js'
 
-export default class UserView {
+export default class ProfilePageView {
     constructor() {
         this.userController = new UserController();
         this.activityController= new activityController();

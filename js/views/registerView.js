@@ -1,6 +1,6 @@
 import UserController from '../controllers/userController.js'
 
-export default class UserView {
+export default class RegisterView {
     constructor() {
         this.userController = new UserController();
         // Gestão do form de registo

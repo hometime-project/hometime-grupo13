@@ -1,6 +1,6 @@
 import UserController from '../controllers/userController.js'
 
-export default class UserView {
+export default class LogView {
     constructor() {
         this.userController = new UserController();
 
