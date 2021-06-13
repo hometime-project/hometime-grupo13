@@ -47,6 +47,9 @@
         height: 85vh;
 
     }
+    #myCatalog{
+        margin-left: 12%;
+    }
 }
 
 @media (min-device-width:769px) {

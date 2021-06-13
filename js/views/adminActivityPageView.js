@@ -58,7 +58,7 @@ export default class adminActivityView {
       </tr>`
        this.id=0
         for (const data of datas) {
-            this.begin+=`<tr><td>${this.id}</td><td>${data.name}</td><td>${data.video}</td><td>${data.doActivity}</td><td>${data.difficultyLevel}</td><td>${data.durationActivity}</td><td>${data.resourcesActivity}</td><td>${data.categoryActivity}</td><td><button class="btn btn-dark me-md-2 mb-2" id="editActivity">Editar</button><button class="btn btn-danger" id="dellActivity">Apagar</button></td></tr>`
+            this.begin+=`<tr><td>${this.id}</td><td>${data.name}</td><td>${data.video}</td><td>${data.doActivity}</td><td>${data.difficultyLevel}</td><td>${data.durationActivity}</td><td>${data.resourcesActivity}</td><td>${data.categoryActivity}</td><td><button class="btn btn-dark me-md-2 mb-2" id="editActivity">Editar</button><button class="btn btn-danger mb-2" id="dellActivity">Apagar</button></td></tr>`
             this.id++
         }
         this.table.innerHTML=this.begin
