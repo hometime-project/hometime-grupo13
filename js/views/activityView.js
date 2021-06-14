@@ -49,7 +49,7 @@ export default class ActivityView {
         this.list=datas
         this.catalogContent=""
         for (const data of datas) {
-            this.catalogContent+=`<div class="col-sm-2 mt-4 me-md-5">
+            this.catalogContent+=`<div class="col-sm-3 mt-4">
             <div class="card text-center " style="width: 15rem;background-color: white;border-color:#00357a">
               <img src="${data.image}" class="card-img-top align-self-center mt-1" style="width: 175px;">
               <button style="font-weight: bold;font-family: QuickSand; color:#00357a;font-size: 19px;" class="btn stretched-link" name="${data.name}" id="buttonSeeDetails">${data.name}</button>
