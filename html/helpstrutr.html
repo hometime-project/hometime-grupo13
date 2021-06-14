@@ -34,7 +34,8 @@
           </div>
         </div>
     </nav>
-    <section style="height: 60vh;background-image: url('/img/help_image.jpg')" class="d-flex align-items-center">
+
+    <section style="height: 60vh;background-image: url('/img/help_image.jpg');background-repeat: no-repeat; background-size: cover;" class="d-flex align-items-center">
       <div class="container">
       <h3 style="font-family: QuickSand;font-weight: bold;color: white;">Precisa de ajuda psicológica?</h3>
       <p style="font-family: QuickSand;color: white;">Não se preocupe a nossa aplicação permite localizar e <br>informar quais os consultórios de psicologia mais próximos <br>de si!</p>
@@ -43,11 +44,11 @@
 
     <div class="container" style="color:#1498d6;font-family: QuickSand;margin-top: 2%;">
         <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-8 m-2">
               <div id="map" class="mb-2"></div>
             </div>
-            <div class="col-sm-4" style="background-color: #e7e7e7;border-radius:5px;height:350px">
+            <div class="row justify-content-center col-11 col-sm-4 my-2 " style="background-color: #e7e7e7;border-radius:5px;height:350px">
                 <div class="col-sm-12">
                 <h2 class="mt-3">Filtros</h2>
                 <select class="form-select mb-3" aria-label="Default select example" id="selectDistrit">
@@ -83,9 +84,9 @@
                     <option value="Segunda-Sexta">Segunda-Sexta</option>
                   </select>
                 </div>
-                <div class="d-grid gap-2 d-md-block mb-2">
-                  <button class="btn btn-outline-secondary btn-lg" type="button" id="resetFilter">Repor</button>
-                  <button class="btn btn-primary btn-lg" type="button" id="aplyFilter">Aplicar <i class="fas fa-arrow-right"></i></button>
+                <div class="d-grid gap-12 d-md-block mb-2">
+                  <button class="btn btn-outline-secondary btn-lg m-2" type="button" id="resetFilter">Repor</button>
+                  <button class="btn btn-primary btn-lg m-2" type="button" id="aplyFilter">Aplicar <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
