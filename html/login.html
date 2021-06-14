@@ -11,29 +11,30 @@
     <title>Hometime: Autenticação</title>
   </head>
   <body style="background: url('/img/Login_Image.png'); width:100%;background-position: center;">
-    
     <section style="height:100vh;" class="d-flex justify-content-center">
-    <div id="backshadow" class="container-fluid d-flex justify-content-center flex-column align-content-center align-self-center" style="background-color:#b1b1b18f;border-radius: 10px;">
+
+      <div id="backshadow" class="container-fluid d-flex justify-content-center flex-column align-content-center align-self-center" style="background-color:#b1b1b18f;border-radius: 10px;">
         <div class="text-center">
-        <img src="/img/exemplo_final_finall.png" class="img-fluid" style="padding-top: 5%;padding-bottom: 5%;" width="336px">
-        <h2 id="generaltextwhite" style="padding-bottom: 5%;">Autenticar</h2>
+          <img src="/img/exemplo_final_finall.png" class="img-fluid" style="padding-top: 5%;padding-bottom: 5%;" width="336px">
+          <h2 id="generaltextwhite" style="padding-bottom: 5%;">Autenticar</h2>
         </div>
-        <form action="" id="frmLogin">
-        <div class="mb-3">
-          <input style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700;border-radius: 5px;margin-bottom: 2%;"type="text" class="form-control" id="txtUsername" placeholder="&#xf007 Username">
-        </div>
-        <div class="mb-3">
+        <form id="frmLogin" class="row justify-content-center align-content-center align-self-center">
+          <div class="mb-3 col-10">
+            <input type="text" class="form-control" id="txtUsername" placeholder="&#xf007 Username" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700;border-radius: 5px;margin-bottom: 2%;">
+          </div>
+          <div class="mb-3 col-10">
             <input type="password" class="form-control" id="txtPassword" placeholder="&#xf023 Password" style="font-family: 'Font Awesome 5 Free',QuickSand;font-weight: 700; border-radius: 5px;margin-bottom: 2%">
-        </div>
-        <div class="d-grid gap-2" style="padding-bottom: 5%;">
+          </div>
+          <div class="d-grid mt-3 gap col-10" style="padding-bottom: 5%;">
             <input type="submit"  class="btn btn-primary" id="btnlogin" value="Autenticar">
             <hr>
             <a href="register.html" class="btn btn-primary" role="button"  id="btnregister">Registar</a>
-        </div>
-        <div id="loginMessage" class="mb-3"></div>
-      </form>
-    </div>
+          </div>
+          <div id="loginMessage" class="mb-3"></div>
+        </form>
+      </div>
     </section>
+
     <script type="module" src="../js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
 </html>
