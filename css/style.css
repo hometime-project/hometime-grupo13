@@ -31,7 +31,7 @@
 
 #homeSectionImage {
     height: 85vh;
-    background-image: url('/img/Imagem4_.png');
+    background-image: url('img/Imagem4_.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
