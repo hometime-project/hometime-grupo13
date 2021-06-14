@@ -40,7 +40,7 @@ export default class adminActivityView {
     }
     //Função que irá preencher a tabela com dados
     readData(){
-        this.datas=this.activityController.getUsers()
+        this.datas=this.activityController.getActivities()
         this.myTable(this.datas)
     }
     //Função que preenche a tabela com os dados do utilizador

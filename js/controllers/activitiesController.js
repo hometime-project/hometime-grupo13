@@ -5,7 +5,7 @@ export default class ActivityController {
         this.activities = localStorage.activities ? JSON.parse(localStorage.activities) : [];
     }
     //Função que irá devolver 
-    getUsers(){
+    getActivities(){
         this.data=[]
         for (const activity of this.activities) {
             this.data.push(activity)

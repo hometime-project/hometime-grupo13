@@ -42,7 +42,7 @@ export default class ActivityView {
         }
     }
     getData(){
-        this.datas=this.activityController.getUsers()
+        this.datas=this.activityController.getActivities()
         this.renderCatalog(this.datas)
     }
     renderCatalog(datas){
