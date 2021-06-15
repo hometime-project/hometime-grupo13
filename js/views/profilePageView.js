@@ -240,7 +240,7 @@ export default class ProfilePageView {
     </div>`
       for (const product of this.products) {
         if(+product.levelStore>+this.levelProfile.innerHTML){
-          this.finalList+=`<div class="col-sm-3 align-self-center">
+          this.finalList+=`<div class="col-sm-3 mb-2 align-self-center">
         <div class="card text-center" style="width: 11rem;">
           <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
           <div class="card-body">
@@ -251,7 +251,7 @@ export default class ProfilePageView {
       </div>`
         }
         else if(this.myUser.avatars.some(element=>element==product.imageStore)==true){
-        this.finalList+=`<div class="col-sm-3 align-self-center">
+        this.finalList+=`<div class="col-sm-3 mb-2 align-self-center">
         <div class="card text-center" style="width: 11rem;">
           <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
           <div class="card-body">
@@ -262,7 +262,7 @@ export default class ProfilePageView {
       </div>`
       }
       else if(+product.coinsStore>+this.nCoins.innerHTML){
-        this.finalList+=`<div class="col-sm-3 align-self-center">
+        this.finalList+=`<div class="col-sm-3 mb-2 align-self-center">
         <div class="card text-center" style="width: 11rem;">
           <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
           <div class="card-body">
@@ -273,7 +273,7 @@ export default class ProfilePageView {
       </div>`
       }
       else{
-        this.finalList+=`<div class="col-sm-3 align-self-center">
+        this.finalList+=`<div class="col-sm-3 mb-2 align-self-center">
         <div class="card text-center" style="width: 11rem;">
           <img src="${product.imageStore}" class="card-img-top align-self-center" style="width:150px" alt="...">
           <div class="card-body">
@@ -306,7 +306,7 @@ export default class ProfilePageView {
     this.avatarList=''
     for (const item of this.list.avatars) {
       if(item==this.list.picture){
-        this.avatarList+=`<div class="col-sm-3 align-self-center">
+        this.avatarList+=`<div class="col-sm-3 mb-2 align-self-center">
         <div class="card text-center" style="width: 11rem;">
           <img src="${item}" class="card-img-top align-self-center" style="width:150px" alt="...">
           <div class="card-body">
@@ -316,7 +316,7 @@ export default class ProfilePageView {
       </div>`
       }
       else{
-      this.avatarList+=`<div class="col-sm-3 align-self-center">
+      this.avatarList+=`<div class="col-sm-3 mb-2 align-self-center">
       <div class="card text-center" style="width: 11rem;">
         <img src="${item}" class="card-img-top align-self-center" style="width:150px" alt="...">
         <div class="card-body">
