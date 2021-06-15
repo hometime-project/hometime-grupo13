@@ -90,6 +90,7 @@ export default class AdminUserPageView {
                 if(this.confirm==true){
                 this.userController.changeDataUser(this.rAdminUsername.value,this.rAdminEmail.value,this.rAdminDataBth.value,this.rAdminGender.value);
                 setTimeout(()=>{location.reload()}, 500)
+                this.readData()
                 }
             }
         })
