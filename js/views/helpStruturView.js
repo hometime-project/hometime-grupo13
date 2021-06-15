@@ -49,7 +49,7 @@ export default class HelpStruturView {
               "</div>" +
               `<h1 id="firstHeading" class="firstHeading">${item.name}</h1>` +
               '<div id="bodyContent">' +
-              `<img src="${item.image}" height="100px"></img>` +
+              `<img src="${item.image}" height="200px" class="mb-1"></img>` +
               `<p><i class="fas fa-phone-alt"></i> <span style="font-weight: bold;">Contacto:</span> ${item.phone}</p>` +
               `<p><i class="fas fa-location-arrow"></i> <span style="font-weight: bold;">Morada:</span> ${item.street}</p>` +
               `<p><i class="fas fa-clock"></i> <span style="font-weight: bold;">Horário:</span> ${item.hours}(${item.days})</p>` +

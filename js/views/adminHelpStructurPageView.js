@@ -101,7 +101,7 @@ registerStructur() {
         event.preventDefault();
         if(this.btnSubmit.value=="Adicionar Estrutura"){
             this.helpStructurController.register(this.nameHelp.value, this.imageHelp.value,this.phoneHelp.value,this.latHelp.value,this.longHelp.value,this.streetHelp.value,this.distritHelp.value,this.openhHelp.value,this.dayHelp.value);
-            this.readData()
+            setTimeout(()=>{location.reload()}, 500)
         }
         else{
             this.confirm=confirm("Confirma as alterações?")
