@@ -242,7 +242,7 @@ class App {
                 lat:"41.3018331",
                 long:"-7.7971446",
                 street:"Rua D.Sancho I",
-                distrit:"Porto",
+                distrit:"Vila Real",
                 hours:"9:00-18:00",
                 days:"Segunda-Sexta"
             }
